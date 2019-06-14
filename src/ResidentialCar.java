@@ -1,8 +1,10 @@
 import java.util.List;
 
+
 public class ResidentialCar {
-   private List<String> home;
-   private List<String> work;
+   private double[] home;
+   private double[] work;
+   private double[][] commute;
 
    public ResidentialCar() {
 
