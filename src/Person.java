@@ -27,7 +27,6 @@ public class Person extends Residential {
 
    public double[] getLocation() {
       double percent = getPeriodPercent();
-      System.out.println(percent);
       if (pet)
          return getLocationWithPet(percent);
 

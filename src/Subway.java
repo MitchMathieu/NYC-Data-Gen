@@ -51,10 +51,7 @@ public class Subway extends Route {
       } else {
          reverse = true;
       }
-      if (reverse)
-         System.out.println("Moving in reverse!");
-      else
-         System.out.println("Moving forward!");
+
       percent = percent%10 / 10;
       return getRouteCoordinate(route, percent, reverse);
    }

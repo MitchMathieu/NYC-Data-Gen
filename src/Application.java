@@ -3,27 +3,30 @@ public class Application {
 //      CsvReader reader = new CsvReader("pet-walk-3.csv");
 //      System.out.println(reader.getLines());
 
-
       int period = 86400;
-      Car car = new Car();
-      System.out.println("Car location:");
-      double[] coords = car.getLocation();
-      System.out.printf("(%f, %f)\n", coords[0], coords[1]);
+      double[] coords;
+      for (int i=1; i<4; i++) {
+         Subway subway = new Subway(period, i);
+         coords = subway.getLocation();
+         System.out.printf("Subway%d location: (%f, %f)\n", i, coords[0], coords[1]);
+      }
 
-      Subway subway = new Subway();
-      System.out.println("\nSubway location");
-      coords = subway.getLocation();
-      System.out.printf("(%f, %f)\n", coords[0], coords[1]);
+      for (int i=1; i<4; i++) {
+         Car car = new Car(period, i);
+         coords = car.getLocation();
+         System.out.printf("Car%d location: (%f, %f)\n", i, coords[0], coords[1]);
+      }
 
-      Pet pet = new Pet();
-      System.out.println("Pet location:");
-      coords = pet.getLocation();
-      System.out.printf("(%f, %f)\n", coords[0], coords[1]);
+      for (int i=1; i<4; i++) {
+         Person person = new Person(period, i);
+         coords = person.getLocation();
+         System.out.printf("Person%d location: (%f, %f)\n", i, coords[0], coords[1]);
+      }
 
-      Person person = new Person();
-      person.setPet(true);
-      System.out.println("Person location:");
-      coords = person.getLocation();
-      System.out.printf("(%f, %f)\n", coords[0], coords[1]);
+      for (int i=1; i<4; i++) {
+         Pet pet = new Pet(period, i);
+         coords = pet.getLocation();
+         System.out.printf("Pet%d location: (%f, %f)\n", i, coords[0], coords[1]);
+      }
    }
 }

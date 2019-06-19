@@ -60,5 +60,5 @@ public abstract class Residential extends Route {
       this.work = commute[commute.length - 1];
    }
 
-   protected abstract double[] getLocation();
+   public abstract double[] getLocation();
 }
