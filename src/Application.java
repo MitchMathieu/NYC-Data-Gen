@@ -21,6 +21,7 @@ public class Application {
       System.out.printf("(%f, %f)\n", coords[0], coords[1]);
 
       Person person = new Person();
+      person.setPet(true);
       System.out.println("Person location:");
       coords = person.getLocation();
       System.out.printf("(%f, %f)\n", coords[0], coords[1]);
