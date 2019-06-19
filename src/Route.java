@@ -15,10 +15,6 @@ public abstract class Route {
       return (Instant.now().getEpochSecond() % period) / period * 100;
    }
 
-//   protected double getRoutePercentage(double[][] route, double speed) {
-//
-//   }
-
    protected int getRandom(int range) {
       Random rand = new Random();
       return rand.nextInt(range);

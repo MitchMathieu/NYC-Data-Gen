@@ -14,17 +14,15 @@ public class Subway extends Route {
       switch (route) {
          case "NR":
             this.route = SUBWAY_NR;
+            break;
          case "1":
             this.route = SUBWAY_1;
+            break;
          case "4":
             this.route = SUBWAY_4;
+            break;
       }
    }
-
-//   protected double getRoutePercentage(double routeTime) {
-//      double percent = getPeriodPercent();
-//      double routePercent = percent % (routeTime*2);
-//   }
 
    public double[] getLocation() {
       double percent = getPeriodPercent();
