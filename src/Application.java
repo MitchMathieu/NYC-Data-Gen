@@ -10,8 +10,7 @@ public class Application {
       double[] coords = car.getLocation();
       System.out.printf("(%f, %f)\n", coords[0], coords[1]);
 
-
-      Subway subway = new Subway(period, "4");
+      Subway subway = new Subway();
       System.out.println("\nSubway location");
       coords = subway.getLocation();
       System.out.printf("(%f, %f)\n", coords[0], coords[1]);
@@ -19,6 +18,11 @@ public class Application {
       Pet pet = new Pet();
       System.out.println("Pet location:");
       coords = pet.getLocation();
+      System.out.printf("(%f, %f)\n", coords[0], coords[1]);
+
+      Person person = new Person();
+      System.out.println("Person location:");
+      coords = person.getLocation();
       System.out.printf("(%f, %f)\n", coords[0], coords[1]);
    }
 }

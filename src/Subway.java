@@ -5,20 +5,34 @@ public class Subway extends Route {
 
    private double[][] route;
 
-   public Subway(double period, String route) {
+   public Subway() {
+      super();
+      init();
+   }
+
+   public Subway(double period) {
+      super(period);
+      init();
+   }
+
+   public Subway(double period, int route) {
       super(period);
       init(route);
    }
 
-   private void init(String route) {
+   private void init() {
+      init(getRandom(3)+1);
+   }
+
+   private void init(int route) {
       switch (route) {
-         case "NR":
+         case 1:
             this.route = SUBWAY1;
             break;
-         case "1":
+         case 2:
             this.route = SUBWAY2;
             break;
-         case "4":
+         case 3:
             this.route = SUBWAY3;
             break;
       }
@@ -26,7 +40,6 @@ public class Subway extends Route {
 
    public double[] getLocation() {
       double percent = getPeriodPercent();
-      System.out.printf("Period percent: %.3f\n", percent);
       boolean reverse;
 
       if ((percent < 10) ||

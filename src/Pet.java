@@ -14,7 +14,6 @@ public class Pet extends Residential {
 
    public double[] getLocation() {
       double percent = getPeriodPercent();
-      System.out.printf("Period percent: %f\n", getPeriodPercent());
 
       if (percent < 20)
          return home;
