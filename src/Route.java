@@ -70,10 +70,12 @@ public abstract class Route {
       double degrees = radians * (180 / Math.PI);
 
       // convert range from (-pi, pi) to (0, 360)
-      if (degrees > 0)
+      if (degrees > 0) {
          degrees = 360 - degrees;
-      else
+      }
+      else {
          degrees = (-1) * degrees;
+      }
 
       // rotate orientation so 0 = north, 90 = east, etc.
       degrees = (degrees + 90) % 360;
