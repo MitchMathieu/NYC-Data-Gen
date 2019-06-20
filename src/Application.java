@@ -5,28 +5,33 @@ public class Application {
 
       int period = 86400;
       double[] coords;
+      double orientation;
       for (int i=1; i<4; i++) {
          Subway subway = new Subway(period, i);
          coords = subway.getLocation();
-         System.out.printf("Subway%d location: (%f, %f)\n", i, coords[0], coords[1]);
+         orientation = subway.getOrientation();
+         System.out.printf("Subway%d location: (%f, %f) in direction %f\n", i, coords[0], coords[1], orientation);
       }
 
       for (int i=1; i<4; i++) {
          Car car = new Car(period, i);
          coords = car.getLocation();
-         System.out.printf("Car%d location: (%f, %f)\n", i, coords[0], coords[1]);
+         orientation = car.getOrientation();
+         System.out.printf("Car%d location: (%f, %f) in direction %f\n", i, coords[0], coords[1], orientation);
       }
 
       for (int i=1; i<4; i++) {
          Person person = new Person(period, i);
          coords = person.getLocation();
-         System.out.printf("Person%d location: (%f, %f)\n", i, coords[0], coords[1]);
+         orientation = person.getOrientation();
+         System.out.printf("Person%d location: (%f, %f) in direction %f\n", i, coords[0], coords[1], orientation);
       }
 
       for (int i=1; i<4; i++) {
          Pet pet = new Pet(period, i);
          coords = pet.getLocation();
-         System.out.printf("Pet%d location: (%f, %f)\n", i, coords[0], coords[1]);
+         orientation = pet.getOrientation();
+         System.out.printf("Pet%d location: (%f, %f) in direction %f\n", i, coords[0], coords[1], orientation);
       }
    }
 }

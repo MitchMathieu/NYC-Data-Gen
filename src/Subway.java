@@ -40,6 +40,7 @@ public class Subway extends Route {
 
    public double[] getLocation() {
       double percent = getPeriodPercent();
+      System.out.println(percent);
       boolean reverse;
 
       if ((percent < 10) ||
